@@ -1,0 +1,64 @@
+@import 'variables';
+
+.header {
+  border-bottom: 1px solid $gray-line;
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: 700;
+  }
+
+  &__info > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+
+    p, a {
+      color: $orange;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin-right: 5px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: 40px;
+    position: relative;
+    top: -8px;
+
+    img {
+      margin-right: 15px;
+      height: inherit;
+      display: block;
+    }
+
+    h1 {
+      color: #181818;
+      font-size: 24px;
+      letter-spacing: 1%;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      color: #7b7b7b;
+    }
+  }
+}
