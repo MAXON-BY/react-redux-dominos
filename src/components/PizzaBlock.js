@@ -20,7 +20,7 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
         setActiveSize(index)
     }
 
-    const onAddPizza = ()=> {
+    const onAddPizza = () => {
         const obj = {
             id,
             name,
@@ -34,16 +34,22 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
 
     return (
         <div className="pizza-block">
-            <img
-                className="pizza-block__image"
-                src={imageUrl}
-                alt="Pizza"
-            />
+            <div className="pizza-block__animation">
+                <img
+                    className="pizza-block__image"
+                    src={imageUrl}
+                    alt="Pizza"
+                />
+                <div className="pizza-block__button-wrap">
+                    <button className="pizza-block__button-eye" type="button">!</button>
+                </div>
+            </div>
+
             <h4 className="pizza-block__title">{name}</h4>
             <p className="pizza-block__description">{ingredients}</p>
             <div className="pizza-block__selector">
                 <ul>
-                    {types.map((type,index) => {
+                    {types.map((type, index) => {
                         return (
                             <li
                                 key={type}
@@ -57,7 +63,7 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
                 <ul>
                     {
                         sizes.map((size, index) => {
-                            return(
+                            return (
                                 <li
                                     key={size}
                                     onClick={() => onSelectSize(index)}
@@ -80,7 +86,7 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
                     outline
                 >
                     <span>В корзину</span>
-                    {addedCount &&<i>{addedCount}</i>}
+                    {addedCount && <i>{addedCount}</i>}
                 </Button>
             </div>
         </div>

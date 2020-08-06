@@ -5,13 +5,67 @@
   width: 25%;
   flex-basis: calc(25% - 16px);
   margin: 0 8px 16px;
-  -webkit-transition: -webkit-transform .15s linear,-webkit-box-shadow .15s linear;
-  transition: transform .15s linear,box-shadow .15s linear;
+  -webkit-transition: -webkit-transform .15s linear, -webkit-box-shadow .15s linear;
+  transition: transform .15s linear, box-shadow .15s linear;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 4px 10px rgba(63,93,138,.1);
+  box-shadow: 0 4px 10px rgba(63, 93, 138, .1);
   box-sizing: border-box;
   background: #fff;
+
+  &:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+
+    .pizza-block__button-wrap{
+      opacity: 1;
+    }
+
+    .pizza-block__button-eye{
+      opacity: 1;
+    }
+  }
+
+
+  &__animation {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__button-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .46%);
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__button-eye {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    margin: auto;
+    background: #e31837;
+    color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
 
   &__image {
     display: block;
@@ -59,6 +113,7 @@
         font-weight: 600;
         font-size: 14px;
         @include noselect();
+
         &.active {
           background: #ffffff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
@@ -82,20 +137,20 @@
     line-height: 27px;
     letter-spacing: 0.015em;
 
-    span{
+    span {
       font-weight: normal;
       font-size: 15px;
     }
   }
 
-  &__dop{
+  &__dop {
     text-align: left;
   }
 
-  &__weight{
+  &__weight {
     font-size: 11px;
     line-height: 13px;
-    color: rgba(67,82,90,.54);
+    color: rgba(67, 82, 90, .54);
     white-space: nowrap;
   }
 
