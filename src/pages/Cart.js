@@ -5,8 +5,13 @@ import { Link } from 'react-router-dom';
 import cartEmptyImage from '../assets/img/empty-cart.png';
 import { CartItem, Button } from '../components';
 import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../redux/actions/cart';
+import PopupWindow from "../components/PopupWindow";
 
-function Cart() {
+
+const DeleteItemMessage = 'Вы действительно хотите удалить пиццу?'
+const ClearCartMessage = 'Вы действительно хотите очистить корзину?'
+
+const Cart = () => {
     const dispatch = useDispatch();
     const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
 
@@ -141,7 +146,7 @@ function Cart() {
                 </span>
                             </div>
                             <div className="cart__bottom-buttons">
-                                <a href="/" className="button button--outline button--add go-back-btn">
+                                <Link to="/" className="button button--outline button--add go-back-btn">
                                     <svg
                                         width="8"
                                         height="14"
@@ -156,10 +161,8 @@ function Cart() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <Link to="/">
-                                        <span>Вернуться назад</span>
-                                    </Link>
-                                </a>
+                                    <span>Вернуться назад</span>
+                                </Link>
                                 <Button onClick={onClickOrder} className="pay-btn">
                                     <span>Оплатить сейчас</span>
                                 </Button>
@@ -183,6 +186,9 @@ function Cart() {
                     </div>
                 )}
             </div>
+
+            <PopupWindow msg={ClearCartMessage}/>
+            <PopupWindow msg={DeleteItemMessage}/>
         </div>
     );
 }

@@ -1,0 +1,20 @@
+.popup{
+    &-msg-block{
+        position: absolute;
+        left: calc(50% - 200px);
+        right: 0;
+        width: 400px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px black;
+        padding: 17px;
+        border-radius: 5px;
+        text-align: center;
+        top: 50%;
+    }
+
+    &-btn{
+        button{
+            margin: 15px 10px 0;
+        }
+    }
+}
