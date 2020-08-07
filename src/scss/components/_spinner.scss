@@ -1,0 +1,13 @@
+.spinner{
+  position: relative;
+  width: 100%;
+}
+
+.spinner > div{
+  color: $orange;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}

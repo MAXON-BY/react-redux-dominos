@@ -27,6 +27,7 @@ body {
   &__items {
     display: flex;
     flex-wrap: wrap;
+    min-height: 524px;
   }
 
   &__top {
