@@ -3,11 +3,12 @@ import classes from 'classnames'
 
 const ModalCart = ({show, onClickOk, onClickClose}) => {
 
+    const classOverlay = classes("popup-overlay", {"active": show})
     const classShow = classes("popup-msg-block", "popup-item-desc", {"active": show})
 
     return (
         <>
-        {/*<div className="popup-overlay"></div>*/}
+        <div className={classOverlay} onClick={onClickClose}></div>
         <div className={classShow}>
 
             <div
