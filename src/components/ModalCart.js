@@ -3,7 +3,8 @@ import classes from 'classnames'
 
 const ModalCart = ({show, pizza, onClickClose}) => {
 
-    console.log('modal', pizza)
+    const pizzaItem = pizza[0]
+    console.log('modal',pizzaItem)
 
     const classOverlay = classes("popup-overlay", {"active": show})
     const classShow = classes("popup-msg-block", "popup-item-desc", {"active": show})
