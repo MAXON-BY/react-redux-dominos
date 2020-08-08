@@ -51,6 +51,14 @@ body {
   }
 }
 
+select{
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ebeced;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .cart {
   &__top {
     display: flex;

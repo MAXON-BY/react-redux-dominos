@@ -17,6 +17,99 @@
             top: 40%;
             animation: 0.5s;
         }
+
+        &.popup-item-desc{
+            z-index: 15;
+            width: 600px;
+            left: calc(50% - 300px);
+            top: 25%;
+            padding: 20px;
+        }
+    }
+
+    &-modification{
+        width: 48%;
+
+        &__group{
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 0 18px;
+        }
+    }
+
+    &-summary{
+        display: flex;
+        justify-content: space-between;
+
+        &__price{
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 27px;
+            letter-spacing: 0.015em;
+
+            span{
+                font-weight: normal;
+                font-size: 15px;
+            }
+        }
+
+        &__weight{
+            font-size: 11px;
+            line-height: 13px;
+            color: rgba(67, 82, 90, 0.54);
+            white-space: nowrap;
+        }
+    }
+
+    &-text{
+        text-align: left;
+        padding: 0 20px;
+
+        &__title{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #43525a;
+        }
+        &__nutritional,
+        &__description{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #99a1a6;
+            margin-top: 6px;
+        }
+        &__nutritional{
+            margin-top: 8px;
+        }
+
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-color: rgba(0,0,0,.7);
+    }
+
+    &-close{
+        text-align: right;
+
+        button{
+            cursor: pointer;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            color: $red;
+            border-color: $red;
+        }
+    }
+
+    &-item{
+        display: flex;
     }
 
     &-btn{

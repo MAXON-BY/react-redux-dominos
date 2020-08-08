@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from "./Button";
 
-const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
+const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart}) => {
 
     const {id, imageUrl, name, price, types, sizes, ingredients, weight} = pizza
 
@@ -41,7 +41,13 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
                     alt="Pizza"
                 />
                 <div className="pizza-block__button-wrap">
-                    <button className="pizza-block__button-eye" type="button">!</button>
+                    <button
+                        onClick={handleShowModalCart}
+                        className="pizza-block__button-eye"
+                        type="button"
+                    >
+                        !
+                    </button>
                 </div>
             </div>
 
@@ -89,6 +95,8 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount}) => {
                     {addedCount && <i>{addedCount}</i>}
                 </Button>
             </div>
+
+
         </div>
     );
 };
