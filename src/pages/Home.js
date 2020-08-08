@@ -53,12 +53,18 @@ const sortItems = [
     {name: 'алфавиту', type: 'name'}
 ]
 
+
 const Home = () => {
 
     const [showModalCart, setShowModalCart] = useState(false)
+    const [idPizza, setIdPizza] = useState(null)
 
     const handleShowModalCart = () => {
         setShowModalCart(true)
+    }
+
+    const getIdPizza = (id) => {
+        setIdPizza(id)
     }
 
     const handleCloseModalCart = () => {
@@ -135,6 +141,7 @@ const Home = () => {
                                 addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
                                 onClickAddPizza={addPizza}
                                 handleShowModalCart={handleShowModalCart}
+                                getIdPizza={getIdPizza}
                             />
                         )
                     })
@@ -143,6 +150,7 @@ const Home = () => {
             </div>
 
             <ModalCart
+                pizza={pizzas.filter(pizza => pizza.id === idPizza)}
                 show={showModalCart}
                 onClickClose={handleCloseModalCart}
             />

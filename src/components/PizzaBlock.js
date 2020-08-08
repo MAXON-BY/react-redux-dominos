@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from "./Button";
 
-const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart}) => {
+const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, getIdPizza}) => {
 
     const {id, imageUrl, name, price, types, sizes, ingredients, weight} = pizza
 
@@ -11,6 +11,11 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart}) =
 
     const [activeType, setActiveType] = useState(0)
     const [activeSize, setActiveSize] = useState(0)
+
+    const getIdPizzaFromPizzaBlock = () => {
+        handleShowModalCart()
+        getIdPizza(id)
+    }
 
     const onSelectType = (index) => {
         setActiveType(index)
@@ -42,7 +47,7 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart}) =
                 />
                 <div className="pizza-block__button-wrap">
                     <button
-                        onClick={handleShowModalCart}
+                        onClick={getIdPizzaFromPizzaBlock}
                         className="pizza-block__button-eye"
                         type="button"
                     >

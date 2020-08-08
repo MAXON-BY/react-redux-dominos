@@ -1,7 +1,9 @@
 import React from 'react';
 import classes from 'classnames'
 
-const ModalCart = ({show, onClickOk, onClickClose}) => {
+const ModalCart = ({show, pizza, onClickClose}) => {
+
+    console.log('modal', pizza)
 
     const classOverlay = classes("popup-overlay", {"active": show})
     const classShow = classes("popup-msg-block", "popup-item-desc", {"active": show})
