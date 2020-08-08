@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from './Button';
+import {Modal} from "./index";
 
-const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMinus, onPlus }) => {
+const DeleteItemMessage = 'Вы действительно хотите удалить пиццу?'
+
+const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMinus, onPlus , onModal}) => {
+
+    const [showModalDelete, setShowModalDelete] = useState(false);
+
+    const onShowModalDelete = () => {
+        setShowModalDelete(true)
+    };
+
+    const closeModal = () => {
+        setShowModalDelete(false)
+    }
+
     const handleRemoveClick = () => {
         onRemove(id);
     };
@@ -74,7 +88,7 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
                 <b>{totalPrice} BYN</b>
             </div>
             <div className="cart__item-remove">
-                <Button onClick={handleRemoveClick} className="button--circle" outline>
+                <Button onClick={onShowModalDelete} className="button--circle" outline>
                     <svg
                         width="10"
                         height="10"
@@ -92,6 +106,15 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
                     </svg>
                 </Button>
             </div>
+
+
+            <Modal
+                show={showModalDelete}
+                msg={DeleteItemMessage}
+                onClickOk={handleRemoveClick}
+                onClickNo={closeModal}
+            />
+
         </div>
     );
 };

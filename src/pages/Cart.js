@@ -1,35 +1,39 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import cartEmptyImage from '../assets/img/empty-cart.png';
-import { CartItem, Button } from '../components';
-import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../redux/actions/cart';
-import PopupWindow from "../components/PopupWindow";
+import {CartItem, Button, Modal} from '../components';
+import {clearCart, removeCartItem, plusCartItem, minusCartItem} from '../redux/actions/cart';
 
-
-const DeleteItemMessage = 'Вы действительно хотите удалить пиццу?'
 const ClearCartMessage = 'Вы действительно хотите очистить корзину?'
 
 const Cart = () => {
     const dispatch = useDispatch();
-    const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
+    const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
+
+    const [showModalClear, setShowModalClear] = useState(false);
 
     const addedPizzas = Object.keys(items).map((key) => {
         return items[key].items[0];
     });
 
-    const onClearCart = () => {
-        if (window.confirm('Вы действительно хотите очистить корзину?')) {
-            dispatch(clearCart());
-        }
+    const onShowModalClear = () => {
+        setShowModalClear(true)
     };
 
-    const onRemoveItem = (id) => {
-        if (window.confirm('Вы действительно хотите удалить?')) {
-            dispatch(removeCartItem(id));
-        }
-    };
+    const closeModal = () => {
+        setShowModalClear(false)
+    }
+
+    const onClearCart = () => {
+        closeModal()
+        dispatch(clearCart());
+    }
+
+    const onDeleteItem = (id) => {
+        dispatch(removeCartItem(id))
+    }
 
     const onPlusItem = (id) => {
         dispatch(plusCartItem(id));
@@ -117,7 +121,7 @@ const Cart = () => {
                                     />
                                 </svg>
 
-                                <span onClick={onClearCart}>Очистить корзину</span>
+                                <span onClick={onShowModalClear}>Очистить корзину</span>
                             </div>
                         </div>
                         <div className="content__items">
@@ -130,7 +134,7 @@ const Cart = () => {
                                     size={obj.size}
                                     totalPrice={items[obj.id].totalPrice}
                                     totalCount={items[obj.id].items.length}
-                                    onRemove={onRemoveItem}
+                                    onRemove={onDeleteItem}
                                     onMinus={onMinusItem}
                                     onPlus={onPlusItem}
                                 />
@@ -138,12 +142,8 @@ const Cart = () => {
                         </div>
                         <div className="cart__bottom">
                             <div className="cart__bottom-details">
-                <span>
-                  Всего пицц: <b>{totalCount} шт.</b>
-                </span>
-                                <span>
-                  Сумма заказа: <b>{totalPrice} BYN</b>
-                </span>
+                                <span>Всего пицц: <b>{totalCount} шт.</b></span>
+                                <span>Сумма заказа: <b>{totalPrice} BYN</b></span>
                             </div>
                             <div className="cart__bottom-buttons">
                                 <Link to="/" className="button button--outline button--add go-back-btn">
@@ -171,15 +171,10 @@ const Cart = () => {
                     </div>
                 ) : (
                     <div className="cart cart--empty">
-                        <h2>
-                            Корзина пустая <i>😕</i>
-                        </h2>
-                        <p>
-                            Вероятней всего, вы не заказывали ещё пиццу.
-                            <br />
-                            Для того, чтобы заказать пиццу, перейди на главную страницу.
-                        </p>
-                        <img src={cartEmptyImage} alt="Empty cart" />
+                        <h2>Корзина пустая <i>😕</i></h2>
+                        <p>Вероятней всего, вы не заказывали ещё пиццу.<br/>
+                            Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
+                        <img src={cartEmptyImage} alt="Empty cart"/>
                         <Link to="/" className="button button--black">
                             <span>Вернуться назад</span>
                         </Link>
@@ -187,8 +182,13 @@ const Cart = () => {
                 )}
             </div>
 
-            <PopupWindow msg={ClearCartMessage}/>
-            <PopupWindow msg={DeleteItemMessage}/>
+            <Modal
+                show={showModalClear}
+                msg={ClearCartMessage}
+                onClickOk={onClearCart}
+                onClickNo={closeModal}
+            />
+
         </div>
     );
 }

@@ -1,6 +1,6 @@
 .popup{
     &-msg-block{
-        position: absolute;
+        position: fixed;
         left: calc(50% - 200px);
         right: 0;
         width: 400px;
@@ -9,7 +9,14 @@
         padding: 17px;
         border-radius: 5px;
         text-align: center;
-        top: 50%;
+        display: none;
+        animation: 0.5s;
+
+        &.active {
+            display: block;
+            top: 40%;
+            animation: 0.5s;
+        }
     }
 
     &-btn{

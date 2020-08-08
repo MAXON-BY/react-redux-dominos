@@ -1,8 +1,12 @@
 import React from 'react';
+import classes from 'classnames'
 
-const PopupWindow = ({msg,onClickOk, onClickNo}) => {
+const Modal = ({show, msg, onClickOk, onClickNo}) => {
+
+    const classShow = classes("popup-msg-block", {"active" : show})
+
     return (
-        <div className="popup-msg-block">
+        <div className={classShow}>
             <div className="popup-msg">
                 <p>{msg}</p>
             </div>
@@ -14,4 +18,4 @@ const PopupWindow = ({msg,onClickOk, onClickNo}) => {
     );
 };
 
-export default PopupWindow;
+export default Modal;
