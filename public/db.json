@@ -5,7 +5,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/10/18/kolbaski_karri_small.png",
       "name": "Колбаски Карри",
       "ingredients": "Баварские колбаски, Сыр моцарелла, Соус карри",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 17.1},
+        {"title": "Белки", "count": 18.1},
+        {"title": "Углеводы", "count": 19.1},
+        {"title": "Энегретическая ценность", "count": 259.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -17,7 +23,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/10/18/fermerskaya_small.png",
       "name": "Фермерская",
       "ingredients": "Ветчина, Сыр моцарелла, Огурцы, Соус Чесночный",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 15.1},
+        {"title": "Белки", "count": 16.1},
+        {"title": "Углеводы", "count": 17.1},
+        {"title": "Энегретическая ценность", "count": 359.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -29,7 +41,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/pepperoni_bluz.png",
       "name": "Пепперони Блюз",
       "ingredients": "Пепперони, Голубой сыр, Соус Чесночный, Сыр моцарелла",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 19.1},
+        {"title": "Белки", "count": 17.1},
+        {"title": "Углеводы", "count": 16.1},
+        {"title": "Энегретическая ценность", "count": 289.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -41,7 +59,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/07/03/bavarchkaya_small.png",
       "name": "Баварская",
       "ingredients": "Соус барбекю, Халапеньо, Пармезан, Сыр моцарелла, Баварские колбаски",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 27.1},
+        {"title": "Белки", "count": 27.1},
+        {"title": "Углеводы", "count": 27.1},
+        {"title": "Энегретическая ценность", "count": 459.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -53,7 +77,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/12/12/pepperoni_i_tomaty_small.png",
       "name": "Пепперони и томаты",
       "ingredients": "Томаты, Соус барбекю, Пепперони, Сыр моцарелла",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 11.1},
+        {"title": "Белки", "count": 12.1},
+        {"title": "Углеводы", "count": 13.1},
+        {"title": "Энегретическая ценность", "count": 210.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -65,7 +95,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/ovoshchnaya.png",
       "name": "Овощная",
       "ingredients": "Сладкий перец, Сыр моцарелла, Лук, Оливки, Томаты, Шампиньоны, Томатный соус Domino's",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 220.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 9.99,
@@ -77,7 +113,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/04/21/tsyplenok__dominator_small-min.png",
       "name": "Цыпленок Доминатор",
       "ingredients": "Томаты, Мюнхенские колбаски, Курица, Сыр моцарелла, Соус Чесночный, Огурцы, Сладкий перец",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.8},
+        {"title": "Белки", "count": 14.8},
+        {"title": "Углеводы", "count": 15.8},
+        {"title": "Энегретическая ценность", "count": 230.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -89,7 +131,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/03/11/govyadina_burger_small.png",
       "name": "Говядина BURGER",
       "ingredients": "Шампиньоны, Телятина, Сыр моцарелла, Соус Бургер, Лук, Огурцы",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 10.1},
+        {"title": "Белки", "count": 11.1},
+        {"title": "Углеводы", "count": 12.1},
+        {"title": "Энегретическая ценность", "count": 200.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -101,7 +149,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/barbecue.png",
       "name": "Барбекю",
       "ingredients": "Соус барбекю, Лук, Курица, Шампиньоны, Сыр моцарелла, Бекон",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 14.1},
+        {"title": "Белки", "count": 15.1},
+        {"title": "Углеводы", "count": 16.1},
+        {"title": "Энегретическая ценность", "count": 250.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -113,7 +167,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/carbonara.png",
       "name": "Карбонара",
       "ingredients": "Шампиньоны, Крем фреш, Лук, Сыр моцарелла, Ветчина, Бекон",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 23.2},
+        {"title": "Белки", "count": 24.2},
+        {"title": "Углеводы", "count": 25.3},
+        {"title": "Энегретическая ценность", "count": 290.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -125,7 +185,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/07/14/super_pepperoni_small-min.png",
       "name": "Супер Пепперони",
       "ingredients": "Томатный соус Domino's, Сыр моцарелла, Пепперони",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 30.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.9},
+        {"title": "Энегретическая ценность", "count": 270.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -137,7 +203,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/07/01/gavayskaya_new_small.png",
       "name": "Гавайская",
       "ingredients": "Сыр моцарелла, Курица, Томатный соус Domino's, Ананас, Ветчина",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 17.2},
+        {"title": "Белки", "count": 18.2},
+        {"title": "Углеводы", "count": 19.3},
+        {"title": "Энегретическая ценность", "count": 270.8}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -149,7 +221,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/provence.png",
       "name": "Прованс",
       "ingredients": "Томаты, Голубой сыр, Сыр моцарелла, Крем фреш, Пепперони, Ветчина",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 12.3},
+        {"title": "Белки", "count": 12.4},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 246.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -161,7 +239,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/07/29/gribnaya_small.png",
       "name": "Грибная с голубым сыром",
       "ingredients": "Опята, Сыр моцарелла, Соус Чесночный, Голубой сыр, Шампиньоны",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 10.2},
+        {"title": "Белки", "count": 11.3},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 200.9}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -173,7 +257,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/spice.png",
       "name": "Спайси",
       "ingredients": "Пепперони, Халапеньо, Сыр моцарелла, Томатный соус Domino's, Томаты, Бекон",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 220.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 14.49,
@@ -185,7 +275,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/07/01/Aziya_small.png",
       "name": "Азия",
       "ingredients": "Соус терияки, Курица, Томаты, Сыр моцарелла, Сладкий перец, Пепперони",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 17.7},
+        {"title": "Белки", "count": 18.8},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 278.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -197,7 +293,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/01/09/gipnotika_small.png",
       "name": "Гипнотика",
       "ingredients": "Шпинат, Пепперони, Крем фреш, Обжаренный лук, Сыр моцарелла, Телятина, Соус барбекю, Бекон",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.7},
+        {"title": "Белки", "count": 14.4},
+        {"title": "Углеводы", "count": 18.1},
+        {"title": "Энегретическая ценность", "count": 297.7}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -209,7 +311,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/04/21/%D1%81hicken_curry_small-min.png",
       "name": "Чикен Карри",
       "ingredients": "Курица, Мюнхенские колбаски, Ананас, Сыр моцарелла, Соус карри, Ветчина",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 220.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -221,7 +329,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/barbecue_deluxe.png",
       "name": "Барбекю Делюкс",
       "ingredients": "Сладкий перец, Буженина, Пепперони, Сыр моцарелла, Соус барбекю, Шампиньоны, Пармезан, Лук",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 10.1},
+        {"title": "Белки", "count": 12.1},
+        {"title": "Углеводы", "count": 17.1},
+        {"title": "Энегретическая ценность", "count": 250.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -233,7 +347,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/toskana.png",
       "name": "Тоскана",
       "ingredients": "Томаты, Фета, Курица, Сыр моцарелла, Соус Чесночный, Шпинат",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 17.4},
+        {"title": "Белки", "count": 16.6},
+        {"title": "Углеводы", "count": 15.4},
+        {"title": "Энегретическая ценность", "count": 275.5}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -245,7 +365,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/kantri.png",
       "name": "Кантри",
       "ingredients": "Лук, Ветчина, Сыр моцарелла, Шампиньоны, Бекон, Огурцы, Соус Чесночный",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 16.3},
+        {"title": "Углеводы", "count": 18.5},
+        {"title": "Энегретическая ценность", "count": 270.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -257,7 +383,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/5_syrov.png",
       "name": "5 Сыров",
       "ingredients": "Фета, Пармезан, Голубой сыр, Крем фреш, Сыр моцарелла, Чеддер",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 23.1},
+        {"title": "Белки", "count": 20.2},
+        {"title": "Углеводы", "count": 15.0},
+        {"title": "Энегретическая ценность", "count": 320.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -269,7 +401,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/krevetki_s_ananasom.png",
       "name": "Креветки с ананасами",
       "ingredients": "Соус Чесночный, Шампиньоны, Ананас, Креветки x 2, Сыр моцарелла",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.8},
+        {"title": "Белки", "count": 14.7},
+        {"title": "Углеводы", "count": 19.2},
+        {"title": "Энегретическая ценность", "count": 245.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -281,7 +419,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/07/03/myunkhenskaya_small.png",
       "name": "Мюнхенская",
       "ingredients": "Горчица, Баварские колбаски, Соус барбекю, Ветчина, Мюнхенские колбаски, Сыр моцарелла, Томаты",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 220.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -293,7 +437,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/mizza.png",
       "name": "МитZZа",
       "ingredients": "Томатный соус Domino's, Сыр моцарелла, Бекон, Телятина, Буженина, Пармезан, Пепперони, Ветчина",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 17.1},
+        {"title": "Белки", "count": 19.8},
+        {"title": "Углеводы", "count": 20.4},
+        {"title": "Энегретическая ценность", "count": 292.0}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -305,7 +455,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/firmennaya.png",
       "name": "Доминос Фирменная",
       "ingredients": "Лук, Курица, Пармезан, Томатный соус Domino's, Буженина, Бекон, Шампиньоны, Телятина, Томаты, Сыр моцарелла, Сладкий перец",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 20.1},
+        {"title": "Белки", "count": 14.8},
+        {"title": "Углеводы", "count": 25.1},
+        {"title": "Энегретическая ценность", "count": 300.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -317,7 +473,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2020/04/21/eksravaganzza_small-min.png",
       "name": "ЭкстраваганZZа",
       "ingredients": "Телятина, Шампиньоны, Томатный соус Domino's, Сыр моцарелла, Пепперони, Лук, Сладкий перец, Оливки, Ветчина",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 14.1},
+        {"title": "Белки", "count": 19.9},
+        {"title": "Углеводы", "count": 11.1},
+        {"title": "Энегретическая ценность", "count": 282.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 16.99,
@@ -329,7 +491,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2019/10/18/feta_s_tomatami_small.png",
       "name": "Фета с томатами",
       "ingredients": "Томаты, Крем фреш, Сыр моцарелла, Фета",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 12.2},
+        {"title": "Белки", "count": 13.3},
+        {"title": "Углеводы", "count": 14.4},
+        {"title": "Энегретическая ценность", "count": 220.0}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 6.99,
@@ -341,7 +509,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/vetchina_i_griby.png",
       "name": "Ветчина и грибы",
       "ingredients": "Томатный соус Domino's, Сыр моцарелла, Ветчина, Шампиньоны",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 10.0},
+        {"title": "Белки", "count": 12.7},
+        {"title": "Углеводы", "count": 14.6},
+        {"title": "Энегретическая ценность", "count": 275.2}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 6.99,
@@ -353,7 +527,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/margarita.png",
       "name": "Маргарита",
       "ingredients": "Томатный соус Domino's, Сыр моцарелла",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 13.1},
+        {"title": "Белки", "count": 14.1},
+        {"title": "Углеводы", "count": 15.1},
+        {"title": "Энегретическая ценность", "count": 220.4}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 6.99,
@@ -365,7 +545,13 @@
       "imageUrl": "https://images.dominos.by/media/dominos/osg/api/2018/09/12/pepperoni.png",
       "name": "Пепперони",
       "ingredients": "Томатный соус Domino's, Пепперони, Сыр моцарелла",
-      "types": [0, 1],
+      "types": ["Хот-Дог борт", "Классика", "Ультратонкое", "Сырный борт", "Тонкое"],
+      "nutritional": [
+        {"title": "Жиры", "count": 10.0},
+        {"title": "Белки", "count": 12.7},
+        {"title": "Углеводы", "count": 14.6},
+        {"title": "Энегретическая ценность", "count": 275.2}
+      ],
       "sizes": [22, 30, 36],
       "weight": [370, 565, 835],
       "price": 6.99,

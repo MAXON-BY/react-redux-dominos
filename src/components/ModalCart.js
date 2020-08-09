@@ -3,7 +3,7 @@ import classes from 'classnames'
 
 const ModalCart = ({show, pizza, onClickClose}) => {
 
-    const pizzaItem = pizza[0]
+    const pizzaItem = pizza[0] || {}
     console.log('modal',pizzaItem)
 
     const classOverlay = classes("popup-overlay", {"active": show})
@@ -23,13 +23,13 @@ const ModalCart = ({show, pizza, onClickClose}) => {
             <div className="popup-content">
                 <div className="popup-item">
                     <div className="popup-item__img">
-                        <img src="https://images.dominos.by/media/dominos/osg/api/2019/10/18/fermerskaya_small.png"
-                             alt=""/>
+                        <img src={pizzaItem.imageUrl}
+                             alt={pizzaItem.name}/>
                     </div>
 
                     <div className="popup-text">
-                        <h3 className="popup-text__title">Фермерская</h3>
-                        <p className="popup-text__description">Ветчина, Сыр моцарелла, Огурцы, Соус Чесночный</p>
+                        <h3 className="popup-text__title">{pizzaItem.name}</h3>
+                        <p className="popup-text__description">{pizzaItem.ingredients}</p>
                         <div className="popup-text__nutritional">
                             <p>Пищевая ценность на 100г продукта:</p>
                             <ul>
@@ -61,7 +61,7 @@ const ModalCart = ({show, pizza, onClickClose}) => {
 
                         <div className="popup-summary">
                             <div className="popup-summary__dop">
-                                <div className="popup-summary__price">9.99 <span>BYN</span></div>
+                                <div className="popup-summary__price">{pizzaItem.price} <span>BYN</span></div>
                                 <div className="popup-summary__weight">370 гр.</div>
                             </div>
                             <button className="button button--add button--outline"><span>В корзину</span></button>
