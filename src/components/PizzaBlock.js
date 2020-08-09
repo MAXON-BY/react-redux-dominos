@@ -4,10 +4,10 @@ import Button from "./Button";
 
 const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, getIdPizza}) => {
 
-    const {id, imageUrl, name, price, types, sizes, ingredients, weight} = pizza
+    const {id, imageUrl, name, price, types, sizes, ingredients, weight, nutritional} = pizza
 
-    const availableTypes = ['тонкое', 'традиционное']
-    const availableSizes = [22, 30, 36]
+    // const availableTypes = ['тонкое', 'традиционное']
+    // const availableSizes = [22, 30, 36]
 
     const [activeType, setActiveType] = useState(0)
     const [activeSize, setActiveSize] = useState(0)
@@ -31,8 +31,9 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
             name,
             imageUrl,
             price,
-            type: availableTypes[activeType],
-            size: availableSizes[activeSize]
+            weight
+            // type: availableTypes[activeType],
+            // size: availableSizes[activeSize]
         }
         onClickAddPizza(obj)
     }
@@ -59,32 +60,50 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
             <h4 className="pizza-block__title">{name}</h4>
             <p className="pizza-block__description">{ingredients}</p>
             <div className="pizza-block__selector">
-                <ul>
-                    {types.map((type, index) => {
-                        return (
-                            <li
-                                key={type}
-                                onClick={() => onSelectType(index)}
-                                className={activeType === index ? 'active' : ''}>
-                                {availableTypes[type]}
-                            </li>
-                        )
-                    })}
-                </ul>
-                <ul>
-                    {
-                        sizes.map((size, index) => {
-                            return (
-                                <li
-                                    key={size}
-                                    onClick={() => onSelectSize(index)}
-                                    className={activeSize === index ? 'active' : ''}>
-                                    {size} см.
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+                <div className="pizza-block__modification">
+                    <select>
+                        <option selected value="22">22 см</option>
+                        <option value="30">30 см</option>
+                        <option value="36">36 см</option>
+                    </select>
+                </div>
+
+                <div className="pizza-block__modification">
+                    <select>
+                        <option selected value="Хот-Дог борт">Хот-Дог борт</option>
+                        <option value="Классика">Классика</option>
+                        <option value="Ультратонкое">Ультратонкое</option>
+                        <option value="Сырный борт">Сырный борт</option>
+                        <option value="Тонкое">Тонкое</option>
+                    </select>
+                </div>
+
+                {/*<ul>*/}
+                {/*    {types.map((type, index) => {*/}
+                {/*        return (*/}
+                {/*            <li*/}
+                {/*                key={type}*/}
+                {/*                onClick={() => onSelectType(index)}*/}
+                {/*                className={activeType === index ? 'active' : ''}>*/}
+                {/*                /!*{availableTypes[type]}*!/*/}
+                {/*            </li>*/}
+                {/*        )*/}
+                {/*    })}*/}
+                {/*</ul>*/}
+                {/*<ul>*/}
+                {/*    {*/}
+                {/*        sizes.map((size, index) => {*/}
+                {/*            return (*/}
+                {/*                <li*/}
+                {/*                    key={size}*/}
+                {/*                    onClick={() => onSelectSize(index)}*/}
+                {/*                    className={activeSize === index ? 'active' : ''}>*/}
+                {/*                    {size} см.*/}
+                {/*                </li>*/}
+                {/*            )*/}
+                {/*        })*/}
+                {/*    }*/}
+                {/*</ul>*/}
             </div>
             <div className="pizza-block__bottom">
                 <div className="pizza-block__dop">
