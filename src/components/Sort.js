@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import PropTypes from "prop-types";
 
-const SortPopup = ({items, activeSortBy, onClickSortType}) => {
+const Sort = ({items, activeSortBy, onClickSortType}) => {
 
     const [visiblePopup, setVisiblePopup] = useState(false);
     const sortRef = useRef();
@@ -63,14 +63,14 @@ const SortPopup = ({items, activeSortBy, onClickSortType}) => {
     );
 };
 
-SortPopup.propTypes = {
+Sort.propTypes = {
     activeSortBy: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.object).isRequired,
     onClickSortType: PropTypes.func.isRequired
 }
 
-SortPopup.defaultProps = {
+Sort.defaultProps = {
     items: []
 }
 
-export default SortPopup;
+export default Sort;

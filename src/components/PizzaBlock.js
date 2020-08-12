@@ -4,25 +4,22 @@ import Button from "./Button";
 
 const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, getIdPizza}) => {
 
-    const {id, imageUrl, name, price, types, sizes, ingredients, weight, nutritional} = pizza
+    const {id, imageUrl, name, price, types, sizes, ingredients, weight} = pizza
 
-    // const availableTypes = ['тонкое', 'традиционное']
-    // const availableSizes = [22, 30, 36]
-
-    const [activeType, setActiveType] = useState(0)
-    const [activeSize, setActiveSize] = useState(0)
+    const [activeType, setActiveType] = useState('')
+    const [activeSize, setActiveSize] = useState('')
 
     const getIdPizzaFromPizzaBlock = () => {
         handleShowModalCart()
         getIdPizza(id)
     }
 
-    const onSelectType = (index) => {
-        setActiveType(index)
+    const onSelectType = (event) => {
+        setActiveType(event.currentTarget.value)
     }
 
-    const onSelectSize = (index) => {
-        setActiveSize(index)
+    const onSelectSize = (event) => {
+        setActiveSize(event.currentTarget.value)
     }
 
     const onAddPizza = () => {
@@ -31,9 +28,9 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
             name,
             imageUrl,
             price,
-            weight
-            // type: availableTypes[activeType],
-            // size: availableSizes[activeSize]
+            weight,
+            type: activeType,
+            size: activeSize
         }
         onClickAddPizza(obj)
     }
@@ -61,20 +58,22 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
             <p className="pizza-block__description">{ingredients}</p>
             <div className="pizza-block__selector">
                 <div className="pizza-block__modification">
-                    <select>
-                        <option selected value="22">22 см</option>
-                        <option value="30">30 см</option>
-                        <option value="36">36 см</option>
+                    <select onChange={onSelectSize}>
+                        {sizes.map((size) => (
+                            <option key={size} value={size}>
+                                {size}
+                            </option>
+                        ))}
                     </select>
                 </div>
 
                 <div className="pizza-block__modification">
-                    <select>
-                        <option selected value="Хот-Дог борт">Хот-Дог борт</option>
-                        <option value="Классика">Классика</option>
-                        <option value="Ультратонкое">Ультратонкое</option>
-                        <option value="Сырный борт">Сырный борт</option>
-                        <option value="Тонкое">Тонкое</option>
+                    <select onChange={onSelectType}>
+                        {types.map((type) => (
+                            <option key={type} value={type}>
+                                {type}
+                            </option>
+                        ))}
                     </select>
                 </div>
 
