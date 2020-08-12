@@ -32,7 +32,7 @@ const Header = () => {
                 <div className="header__cart">
                     <Link to='cart'>
                         <Button className="button button--cart">
-                            <span>{totalPrice} BYN</span>
+                            <span>{totalPrice.toFixed(2)} BYN</span>
                             <div className="button__delimiter"></div>
                             <svg
                                 width="18"

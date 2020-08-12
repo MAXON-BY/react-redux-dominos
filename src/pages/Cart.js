@@ -144,7 +144,7 @@ const Cart = () => {
                         <div className="cart__bottom">
                             <div className="cart__bottom-details">
                                 <span>Всего пицц: <b>{totalCount} шт.</b></span>
-                                <span>Сумма заказа: <b>{totalPrice} BYN</b></span>
+                                <span>Сумма заказа: <b>{totalPrice.toFixed(2)} BYN</b></span>
                             </div>
                             <div className="cart__bottom-buttons">
                                 <Link to="/" className="button button--outline button--add go-back-btn">

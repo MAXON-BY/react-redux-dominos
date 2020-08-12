@@ -85,7 +85,7 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
                 </div>
             </div>
             <div className="cart__item-price">
-                <b>{totalPrice} BYN</b>
+                <b>{totalPrice.toFixed(2)} BYN</b>
             </div>
             <div className="cart__item-remove">
                 <Button onClick={onShowModalDelete} className="button--circle" outline>
