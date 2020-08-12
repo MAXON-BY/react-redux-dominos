@@ -8,14 +8,6 @@ const ModalCart = ({show, pizza, onClickClose}) => {
 
     const pizzaItem = pizza[0] || {}
 
-    const onChangeSize = (event) => {
-        console.log('size: ', event.currentTarget.value)
-    }
-
-    const onChangeType = (event) => {
-        console.log('type: ', event.currentTarget.value)
-    }
-
 
     return (
         <>
@@ -47,38 +39,6 @@ const ModalCart = ({show, pizza, onClickClose}) => {
                                     )
                                 })}
                             </ul>
-                        </div>
-
-                        <div className="popup-modification__group">
-                            <div className="popup-modification">
-                                <select onChange={onChangeSize}>
-                                    {pizzaItem.sizes && pizzaItem.sizes.map((size) => (
-                                        <option key={size} value={size}>
-                                            {size}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-
-                            <div className="popup-modification">
-                                <select onChange={onChangeType}>
-                                    {pizzaItem.types && pizzaItem.types.map((type) => (
-                                        <option key={type} value={type}>
-                                            {type}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className="popup-summary">
-                            <div className="popup-summary__dop">
-                                <div className="popup-summary__price">{pizzaItem.price} <span>BYN</span></div>
-                                <div className="popup-summary__weight">370 гр.</div>
-                            </div>
-
-                            {/*TODO Допилить "В корзину", когда разберусь с состоянием заказа пиццы*/}
-                            {/*<button className="button button--add button--outline"><span>В корзину</span></button>*/}
                         </div>
                     </div>
                 </div>

@@ -24,6 +24,8 @@
             left: calc(50% - 300px);
             top: 25%;
             padding: 20px;
+            padding-bottom: 35px;
+            padding-left: 30px;
         }
     }
 
@@ -53,21 +55,6 @@
             }
         }
 
-        // TODO Закомментить после добавдления в модуль кнопки "В корзину"
-        &__dop{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 60%;
-        }
-
-        // TODO Раскомменитть после добавдления в модуль кнопки "В корзину"
-        //&__weight{
-        //    font-size: 11px;
-        //    line-height: 13px;
-        //    color: rgba(67, 82, 90, 0.54);
-        //    white-space: nowrap;
-        //}
     }
 
     &-text{
@@ -124,6 +111,16 @@
 
     &-item{
         display: flex;
+        align-items: center;
+
+        &__img{
+            width: 200px;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 
     &-btn{

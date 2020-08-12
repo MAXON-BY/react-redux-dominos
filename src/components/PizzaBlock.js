@@ -28,10 +28,10 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
 
     const onAddPizza = () => {
         const obj = {
-            id,
+            id: id + activeSize,
             name,
             imageUrl,
-            price,
+            price: activePrice,
             type: activeType,
             size: activeSize
         }
