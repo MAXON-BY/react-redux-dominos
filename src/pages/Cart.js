@@ -124,12 +124,13 @@ const Cart = () => {
                                 <span onClick={onShowModalClear}>Очистить корзину</span>
                             </div>
                         </div>
-                        <div className="content__items">
+                        <div className="content__items-cart">
                             {addedPizzas.map((obj) => (
                                 <CartItem
                                     key={obj.id}
                                     id={obj.id}
                                     name={obj.name}
+                                    imageUrl={obj.imageUrl}
                                     type={obj.type}
                                     size={obj.size}
                                     totalPrice={items[obj.id].totalPrice}

@@ -4,7 +4,7 @@ import {Modal} from "./index";
 
 const DeleteItemMessage = 'Вы действительно хотите удалить пиццу?'
 
-const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMinus, onPlus , onModal}) => {
+const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMinus, onPlus , imageUrl}) => {
 
     const [showModalDelete, setShowModalDelete] = useState(false);
 
@@ -33,8 +33,8 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
             <div className="cart__item-img">
                 <img
                     className="pizza-block__image"
-                    src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
-                    alt="Pizza"
+                    src={imageUrl}
+                    alt={name}
                 />
             </div>
             <div className="cart__item-info">

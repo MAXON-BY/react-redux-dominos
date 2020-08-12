@@ -6,8 +6,8 @@ const PizzaBlock = ({pizza, onClickAddPizza, addedCount, handleShowModalCart, ge
 
     const {id, imageUrl, name, price, types, sizes, ingredients, weight} = pizza
 
-    const [activeType, setActiveType] = useState('')
-    const [activeSize, setActiveSize] = useState('')
+    const [activeType, setActiveType] = useState('Хот-Дог борт')
+    const [activeSize, setActiveSize] = useState('22')
 
     const getIdPizzaFromPizzaBlock = () => {
         handleShowModalCart()
