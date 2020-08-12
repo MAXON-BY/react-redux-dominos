@@ -160,6 +160,7 @@ select{
       width: 13%;
 
       &-minus {
+        border-radius: 5px 0 0 5px;
         svg {
           path:first-of-type {
             display: none;
@@ -167,8 +168,19 @@ select{
         }
       }
 
+      &-plus {
+        border-radius: 0 5px 5px 0;
+      }
+
       b {
-        font-size: 22px;
+        flex: 1 1 auto;
+        border-top: 1px solid #ebeced;
+        border-bottom: 1px solid #ebeced;
+        text-align: center;
+        font-size: 14px;
+        line-height: 32px;
+        color: #43525a;
+        height: 32px;
       }
     }
 
