@@ -2,7 +2,12 @@
 
 .header {
   border-bottom: 1px solid $gray-line;
-  padding: 40px 0;
+  padding: 25px 0;
+  position: sticky;
+  top: 0px;
+  background-color: #f7fcff;
+  z-index: 10;
+  box-shadow: 1px 1px 10px grey;
 
   .container {
     display: flex;
