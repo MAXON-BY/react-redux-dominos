@@ -1,7 +1,10 @@
+export {default as Categories} from './Categories';
+export {default as PizzaBlock} from './PizzaBlock';
+export {default as ModalCart} from './ModalCart';
+export {default as CartItem} from './CartItem';
+export {default as Spinner} from './Spinner';
+export {default as SortPopup} from './Sort';
 export {default as Button} from './Button';
 export {default as Header} from './Header';
-export {default as Categories} from './Categories';
-export {default as SortPopup} from './Sort';
-export {default as PizzaBlock} from './PizzaBlock';
-export {default as CartItem} from './CartItem';
 export {default as Modal} from './Modal';
+export {default as Empty} from './Empty';

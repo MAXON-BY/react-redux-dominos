@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {CartItem, Button, Modal} from '../components';
+import {CartItem, Button, Modal, Empty} from '../components';
 import {clearCart, removeCartItem, plusCartItem, minusCartItem} from '../redux/actions/cart';
-import Empty from "../components/Empty";
 
 const ClearCartMessage = 'Вы действительно хотите очистить корзину?'
 

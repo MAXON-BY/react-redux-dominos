@@ -1,12 +1,10 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Categories, PizzaBlock, SortPopup} from "../components";
+import {Categories, PizzaBlock, SortPopup, ModalCart, Spinner} from "../components";
 import {useDispatch, useSelector} from "react-redux";
 import Slider from "react-slick";
 import {setCategory, setSortBy} from "../redux/actions/filters";
 import {fetchPizzas} from "../redux/actions/pizzas";
 import {addPizzaToCart} from "../redux/actions/cart";
-import Spinner from "../components/Spinner";
-import ModalCart from "../components/ModalCart";
 
 const categoryNames = [
     'Классические',
