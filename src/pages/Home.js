@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Categories, PizzaBlock, SortPopup, ModalCart, Spinner} from "../components";
+import {Categories, PizzaBlock, SortPopup, ModalCart, Spinner, Error} from "../components";
 import {useDispatch, useSelector} from "react-redux";
 import Slider from "react-slick";
 import {setCategory, setSortBy} from "../redux/actions/filters";
@@ -71,12 +71,13 @@ const Home = () => {
 
     const dispatch = useDispatch()
 
-    const {pizzas, category, sortBy, isLoaded, cartItems} = useSelector(({pizzas, filters, cart}) => {
+    const {pizzas, category, sortBy, isLoaded, cartItems, errorShow} = useSelector(({pizzas, filters, cart}) => {
         return {
             pizzas: pizzas.items,
+            errorShow: pizzas.error,
+            isLoaded: pizzas.isLoaded,
             category: filters.category,
             sortBy: filters.sortBy,
-            isLoaded: pizzas.isLoaded,
             cartItems: cart.items
         }
     })
@@ -129,9 +130,8 @@ const Home = () => {
                 </div>
                 <h2 className="content__title">Пиццы</h2>
                 <div className="content__items">
-                    {isLoaded
-                        ? <Spinner loading={isLoaded}/>
-                        : pizzas && pizzas.map(obj => {
+                    {isLoaded && <Spinner loading={isLoaded}/>}
+                    {pizzas.map(obj => {
                         return (
                             <PizzaBlock
                                 key={obj.id}
@@ -144,6 +144,7 @@ const Home = () => {
                         )
                     })
                     }
+                    {errorShow && <Error show={errorShow}/>}
                 </div>
             </div>
 

@@ -1,6 +1,7 @@
 const initState = {
     items: [],
-    isLoaded: false
+    isLoaded: true,
+    error: false
 }
 
 const pizzas = (state = initState, action) => {
@@ -9,13 +10,18 @@ const pizzas = (state = initState, action) => {
             return {
                 ...state,
                 items: action.payload,
-                isLoaded: false
             }
 
         case "SET_LOADED":
             return {
                 ...state,
                 isLoaded: action.payload
+            }
+
+        case "SET_ERROR":
+            return {
+                ...state,
+                error: true
             }
         default:
             return state
