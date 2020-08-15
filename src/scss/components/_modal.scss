@@ -1,4 +1,9 @@
 .popup{
+
+    &-msg{
+        white-space: pre-line
+    }
+
     &-msg-block{
         position: fixed;
         left: calc(50% - 200px);

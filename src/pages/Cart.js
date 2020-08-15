@@ -6,12 +6,14 @@ import {CartItem, Button, Modal, Empty} from '../components';
 import {clearCart, removeCartItem, plusCartItem, minusCartItem} from '../redux/actions/cart';
 
 const ClearCartMessage = 'Вы действительно хотите очистить корзину?'
+const successfulCartMessage = 'Спасибо за заказ!\nМожете его подтвердить\nИли дозаказать еще :)'
 
 const Cart = () => {
     const dispatch = useDispatch();
     const {totalPrice, totalCount, items} = useSelector(({cart}) => cart);
 
     const [showModalClear, setShowModalClear] = useState(false);
+    const [showModalSuccessful, setShowModalSuccessful] = useState(false);
 
     const addedPizzas = Object.keys(items).map((key) => {
         return items[key].items[0];
@@ -23,6 +25,7 @@ const Cart = () => {
 
     const closeModal = () => {
         setShowModalClear(false)
+        setShowModalSuccessful(false)
     }
 
     const onClearCart = () => {
@@ -43,7 +46,8 @@ const Cart = () => {
     };
 
     const onClickOrder = () => {
-        console.log('ВАШ ЗАКАЗ', items);
+        // console.log('ВАШ ЗАКАЗ', items);
+        setShowModalSuccessful(true)
     };
 
     return (
@@ -177,6 +181,13 @@ const Cart = () => {
             <Modal
                 show={showModalClear}
                 msg={ClearCartMessage}
+                onClickOk={onClearCart}
+                onClickNo={closeModal}
+            />
+
+            <Modal
+                show={showModalSuccessful}
+                msg={successfulCartMessage}
                 onClickOk={onClearCart}
                 onClickNo={closeModal}
             />

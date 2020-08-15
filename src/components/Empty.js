@@ -9,7 +9,7 @@ const Empty = () => {
             <p>Вероятней всего, вы не заказывали ещё пиццу.<br />
                 Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
             <img src={CartEmptyImg} alt="Empty cart" />
-            <Link to="/" class="button button--black">
+            <Link to="/" className="button button--black">
                 <span>Вернуться назад</span>
             </Link>
         </div>
